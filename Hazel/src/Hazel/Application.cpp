@@ -16,7 +16,7 @@ namespace Hazel {
 
 	Application::Application()
 	{
-		HZ_CORE_ASSERT(s_Instance, "Application already exists!");
+		HZ_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
 
 		m_Window = std::unique_ptr<Window>(Window::Create());
@@ -47,7 +47,7 @@ namespace Hazel {
 
 		// HZ_CORE_TRACE("{0}", e);
 
-		for (auto it = m_LayerStack.end(); it != m_LayerStack.end();)
+		for (auto it = m_LayerStack.end(); it != m_LayerStack.begin();)
 		{
 			(*--it)->OnEvent(e);
 
@@ -69,9 +69,6 @@ namespace Hazel {
 			{
 				layer->OnUpdate();
 			}
-
-			auto[x, y] = Input::GetMousePosition();
-			HZ_CORE_TRACE("{0}, {1}", x, y);
 
 			m_Window->OnUpdate();
 		}
