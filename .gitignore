@@ -5,3 +5,6 @@ bin-int/
 
 #Files
 *.user
+
+#script to add, commit and push to github
+UploadToGitHub.bat
