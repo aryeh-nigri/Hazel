@@ -1,8 +1,8 @@
 #include "hzpch.h"
 #include "OrthographicCameraController.h"
 
-#include "Hazel/Input.h"
-#include "Hazel/KeyCodes.h"
+#include "Hazel/Core/Input.h"
+#include "Hazel/Core/KeyCodes.h"
 
 #define MAX_ZOOM_IN 0.25f
 #define MAX_ZOOM_OUT 25.0f
@@ -16,6 +16,7 @@ namespace Hazel {
 
 	void OrthographicCameraController::OnUpdate(Timestep ts)
 	{
+		
 		if (Input::IsKeyPressed(HZ_KEY_A))
 		{
 			m_CameraPosition.x -= m_CameraTranslationSpeed * ts;
