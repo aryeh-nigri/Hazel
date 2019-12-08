@@ -4,7 +4,6 @@
 
 namespace Hazel {
 
-
 	class WindowsInput : public Input
 	{
 	protected:

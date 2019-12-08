@@ -1,6 +1,6 @@
 #pragma once
 
-#include "RendererAPI.h"
+#include "Hazel/Renderer/RendererAPI.h"
 
 namespace Hazel {
 
@@ -18,7 +18,7 @@ namespace Hazel {
 		inline static void DrawIndexed(const Ref<VertexArray>& vertexAray) { s_RendererAPI->DrawIndexed(vertexAray); }
 	
 	private:
-		static RendererAPI* s_RendererAPI;
+		static Scope<RendererAPI> s_RendererAPI;
 	};
 
 }

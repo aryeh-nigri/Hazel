@@ -1,7 +1,7 @@
 #include "hzpch.h"
 #include "VertexArray.h"
 
-#include "Renderer.h"
+#include "Hazel/Renderer/Renderer.h"
 #include "Platform/OpenGL/OpenGLVertexArray.h"
 
 namespace Hazel {
@@ -17,7 +17,7 @@ namespace Hazel {
 			}
 			case RendererAPI::API::OpenGL:
 			{
-				return std::make_shared<OpenGLVertexArray>();
+				return CreateRef<OpenGLVertexArray>();
 			}
 		}
 

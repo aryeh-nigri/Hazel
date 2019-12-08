@@ -9,27 +9,27 @@ namespace Hazel {
 	{
 		switch (type)
 		{
-			case Hazel::ShaderDataType::Float:
+			case ShaderDataType::Float:
 				return GL_FLOAT;
-			case Hazel::ShaderDataType::Float2:
+			case ShaderDataType::Float2:
 				return GL_FLOAT;
-			case Hazel::ShaderDataType::Float3:
+			case ShaderDataType::Float3:
 				return GL_FLOAT;
-			case Hazel::ShaderDataType::Float4:
+			case ShaderDataType::Float4:
 				return GL_FLOAT;
-			case Hazel::ShaderDataType::Mat3:
+			case ShaderDataType::Mat3:
 				return GL_FLOAT;
-			case Hazel::ShaderDataType::Mat4:
+			case ShaderDataType::Mat4:
 				return GL_FLOAT;
-			case Hazel::ShaderDataType::Int:
+			case ShaderDataType::Int:
 				return GL_INT;
-			case Hazel::ShaderDataType::Int2:
+			case ShaderDataType::Int2:
 				return GL_INT;
-			case Hazel::ShaderDataType::Int3:
+			case ShaderDataType::Int3:
 				return GL_INT;
-			case Hazel::ShaderDataType::Int4:
+			case ShaderDataType::Int4:
 				return GL_INT;
-			case Hazel::ShaderDataType::Bool:
+			case ShaderDataType::Bool:
 				return GL_BOOL;
 			default:
 			{
